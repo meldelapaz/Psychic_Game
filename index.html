@@ -1,15 +1,194 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Psychic Game</title>
     <link rel='stylesheet' type="text/css" href="assets/css/style.css">
-    <script src="game.js"></script>
   </head>
-
   <body>
-  
+
+  <h1>The Psychic Game</h1>
+
+    <!-- When we start playing the game, our HTML will be placed into this div. -->
+    <div id="game">
+    <!-- Here we create the HTML that will be injected into our div and displayed on the page. -->
+      <p>Guess what letter I'm thinking of</p>
+      <p>Wins: <span id="wins"></span></p>
+      <p>Losses: <span id="losses"></span></p>
+      <p>Guesses Left: <span id="guessesleft"></span></p>
+      <p>Your Guesses so far: <span id="guessed"></span></p>
+    </div>
+
+    <script type="text/javascript">
+
+      // Our array of possible computer choices.
+      var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "x"];
+
+      // Variables for tracking our wins, losses and ties. They begin at 0.
+      var counterWins = 0;
+      var counterLosses = 0;
+      var guessesleft = 9;
+      var guessessofar = 0;
+
+
+
+      // When the user presses a key, it will run the following function...
+      document.onkeyup = function(event) {
+
+        // Injecting the HTML we just created into our div and updating the game information on our page.
+        document.getElementById("wins").interHTML = counterWins;
+        document.getElementById("losses").innerHTML = counterLosses;
+        document.getElementById("guessesleft").innerHTML = guessesleft;
+        document.getElementById("guessed").innerHTML = guessessofar;
+
+
+        // Determine which key was pressed
+        var userGuess = event.key;
+
+
+        // Sets the computerGuess variable equal to a random choice from the computerChoice array.
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        // If the user presses "r" or "p" or "s", run the game logic.
+
+          // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate counter.
+          if ((userGuess === "a") && (computerGuess === "a")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "b") && (computerGuess === "b")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "c") && (computerGuess === "c")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "d") && (computerGuess === "d")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "e") && (computerGuess === "e")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "f") && (computerGuess === "f")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "g") && (computerGuess === "g")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "h") && (computerGuess === "h")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "i") && (computerGuess === "i")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "j") && (computerGuess === "j")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "k") && (computerGuess === "k")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "l") && (computerGuess === "l")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "m") && (computerGuess === "m")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "n") && (computerGuess === "n")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "o") && (computerGuess === "o")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "p") && (computerGuess === "p")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "q") && (computerGuess === "q")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "r") && (computerGuess === "r")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "s") && (computerGuess === "s")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "t") && (computerGuess === "t")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "u") && (computerGuess === "u")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "v") && (computerGuess === "v")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "w") && (computerGuess === "w")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "x") && (computerGuess === "x")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "y") && (computerGuess === "y")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+          else if ((userGuess === "z") && (computerGuess === "z")) {
+            counterWins++;
+            guessesleft--;
+            console.log ("Win");
+          }
+         else {
+          guessesleft--;
+          }
+        
+      };
+
+    </script>
+
   </body>
-  
 </html>
